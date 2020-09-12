@@ -4,7 +4,7 @@
 int main()
 {
 	int x,y,z;
-	char end[] = { '-','-','-','¨','º', 'â', '»', 'Ã', 'á', '¡', 'Ã', 'Á','-','-','-' };
+	char end[] = { 'N','o',' ', 'N', 'e', 'g', 'a','t','i','v','e' };
 	printf("Enter x: ");
 	scanf("%d", &x);
 	printf("Enter y: ");
@@ -14,8 +14,10 @@ int main()
 	printf("\n");
 	while (true) {
 		if (x < 0 || y < 0 || z < 0) { 
-			for (int i = 0; i <= 14; i++) { printf("%c", end[i]); }
-			break; 
+			for (int i = 0; i <= 10; i++) { printf("%c", end[i]); }
+			printf("\n\n");
+			main();
+			
 		}
 		if (x + y == z)
 		{	
@@ -37,6 +39,11 @@ int main()
 		}
 		if (x / y == z || y / x == z)
 		{
+			if (z == 1)
+			{
+				printf("\n");
+				main();
+			}
 			printf("    ");
 			printf("/\n\n");
 			main();
@@ -47,9 +54,7 @@ int main()
 			printf("**\n\n");
 			main();
 		}
-		x = 0;
-		y = 0;
-		z = 1;
+		
 		printf("\n");
 		main();
 	}
